@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Jogo da Velha</title>
+    <link href="./styles/style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Jogo da Velha</h1>
+
+    <p id="player-turn">Vez do jogador: <span id="current-player">O</span></p>
+
+    <div class="stage">
+        <div>
+            <div id="0" class="square" role="gridcell"></div>
+            <div id="1" class="square" role="gridcell"></div>
+            <div id="2" class="square" role="gridcell"></div>
+        </div>
+        
+        <div>
+            <div id="3" class="square" role="gridcell"></div>
+            <div id="4" class="square" role="gridcell"></div>
+            <div id="5" class="square" role="gridcell"></div>
+        </div> 
+
+        <div>
+            <div id="6" class="square" role="gridcell"></div>
+            <div id="7" class="square" role="gridcell"></div>
+            <div id="8" class="square" role="gridcell"></div>
+        </div>     
+    </div>
+    
+    <!-- Área de controles do jogo -->
+    <div class="controls">
+        <div class="difficulty-selector" id="difficulty-selector" style="display: none;">
+            <label for="difficulty">Dificuldade:</label>
+            <select id="difficulty">
+                <option value="easy">Fácil</option>
+                <option value="normal" selected>Normal</option>
+                <option value="hard">Difícil</option>
+            </select>
+        </div>
+        <button id="vs-player">Jogar contra Pessoa</button>
+        <button id="vs-computer">Jogar contra Computador</button>
+        <button id="reset-button">Reiniciar Jogo</button>
+    </div>
+
+    <script src="./game.js"></script> <!-- Lógica principal do jogo -->
+    <script src="./interface.js"></script> <!-- Controle da interface -->
+</body>
+</html>
